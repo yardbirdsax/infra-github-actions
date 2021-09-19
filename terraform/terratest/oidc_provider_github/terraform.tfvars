@@ -1,6 +1,5 @@
 github_owner_list = [
-  "yardbirdsax",
-  "gomongo"
+  "yardbirdsax/terraform-aws-github-action-federation-role"
 ]
 
 allowed_account_ids = [
