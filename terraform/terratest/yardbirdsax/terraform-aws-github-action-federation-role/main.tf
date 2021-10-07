@@ -26,7 +26,7 @@ resource "aws_iam_policy" "policy" {
 }
 
 module "iam_role" {
-  source = "git@github.com:yardbirdsax/terraform-aws-github-action-federation-role?ref=0.0.1"
+  source = "git@github.com:yardbirdsax/terraform-aws-github-action-federation-role?ref=0.0.2"
 
   iam_role_name   = var.iam_role_name
   github_org_name = var.github_org_name
