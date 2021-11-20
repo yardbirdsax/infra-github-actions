@@ -19,6 +19,15 @@ data "aws_iam_policy_document" "policy" {
     effect    = "Allow"
     resources = ["*"]
   }
+  
+  statement {
+    actions   = ["s3:Put*", "s3:Get*", "s3:ListBucket"]
+    effect    = "Allow"
+    resources = [
+      "arn:aws:s3:::jef-k8slab-tf-remote-state",
+      "arn:aws:s3:::jef-k8slab-tf-remote-state/*"
+    ]
+  }
 }
 
 resource "aws_iam_policy" "policy" {
