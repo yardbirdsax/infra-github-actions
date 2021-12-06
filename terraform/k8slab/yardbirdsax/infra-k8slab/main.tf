@@ -20,7 +20,8 @@ data "aws_iam_policy_document" "policy" {
       "ec2:*",
       "iam:*",
       "ssm:*",
-      "eks:*"
+      "eks:*",
+      "s3:*"
     ]
     effect    = "Allow"
     resources = ["*"]
@@ -30,6 +31,15 @@ data "aws_iam_policy_document" "policy" {
     actions = ["s3:Put*", "s3:Get*", "s3:ListBucket"]
     effect  = "Allow"
     resources = [
+      "arn:aws:s3:::jef-k8slab-tf-remote-state",
+      "arn:aws:s3:::jef-k8slab-tf-remote-state/*"
+    ]
+  }
+
+  statement {
+    actions = [ "s3:Delete*" ]
+    effect = "Deny"
+    resources = [ 
       "arn:aws:s3:::jef-k8slab-tf-remote-state",
       "arn:aws:s3:::jef-k8slab-tf-remote-state/*"
     ]
