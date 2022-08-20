@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws = {
-      version = "3.54.0"
+      version = "~>4"
       source  = "hashicorp/aws"
     }
   }
@@ -15,6 +15,6 @@ provider "aws" {
 
 resource "aws_iam_openid_connect_provider" "github" {
   url             = "https://token.actions.githubusercontent.com"
-  thumbprint_list = ["a031c46782e6e6c662c2c87c76da9aa62ccabd8e"]
+  thumbprint_list = ["15e29108718111e59b3dad31954647e3c344a231"]
   client_id_list  = ["sts.amazonaws.com"]
 }
