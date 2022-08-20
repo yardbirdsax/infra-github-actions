@@ -6,3 +6,5 @@ github_owner_list = [
 allowed_account_ids = [
   "068845349622"
 ]
+
+aws_profile_name = "terratest"
