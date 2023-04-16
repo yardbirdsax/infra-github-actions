@@ -21,7 +21,8 @@ data "aws_iam_policy_document" "policy" {
       "iam:*",
       "ssm:*",
       "eks:*",
-      "s3:*"
+      "s3:*",
+      "logs:*"
     ]
     effect    = "Allow"
     resources = ["*"]
